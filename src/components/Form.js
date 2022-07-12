@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function Form() {
+export default function Form(props) {
+  const [value, setValue] = useState("");
+
+  const valueHandler = (e) => {
+    setValue(e.target.value);
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    props.linkHandler(value);
+    setValue("");
+  };
+
   return (
-    <form className="bg-dark-violet rounded-md flex flex-col w-11/12 mx-auto p-6 justify-center items-center absolute -top-20 left-1/2 -translate-x-1/2 md:flex-row md:w-3/4 md:gap-6 md:p-12 md:rounded-lg">
+    <form
+      className="bg-dark-violet rounded-md flex flex-col w-11/12 mx-auto p-6 justify-center items-center absolute -top-20 left-1/2 -translate-x-1/2 md:flex-row md:w-3/4 md:gap-6 md:p-12 md:rounded-lg"
+      onSubmit={submitHandler}
+    >
       <input
         type="text"
         placeholder="Shorten a link here..."
         className="rounded-md mb-4 py-3 w-full pl-4 md:mb-0 md:py-4 md:text-lg md:rounded-lg"
+        value={value}
+        onChange={valueHandler}
       />
       <button
         type="submit"
