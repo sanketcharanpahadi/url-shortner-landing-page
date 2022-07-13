@@ -14,7 +14,6 @@ function App() {
 
   const linkHandler = (url) => {
     setLinks(links.concat({ oUrl: url, sUrl: "", shorted: false, id: url }));
-    console.log(links);
   };
 
   const shortLinkHandler = (url, link, shorted, id) => {
@@ -23,7 +22,6 @@ function App() {
       return link;
     });
     setLinks(arr);
-    console.log("lol");
   };
 
   useEffect(() => {
@@ -37,7 +35,7 @@ function App() {
         <Starter />
         <section className="form bg-neutral-gray relative pt-40 md:pb-24">
           <Form linkHandler={linkHandler} />
-          <div className="shorten-links mb-16 flex flex-col gap-6">
+          <div className="shorten-links mb-16 flex flex-col gap-6 md:gap-4">
             {links.map((link) => (
               <Shorten
                 key={link.oUrl}

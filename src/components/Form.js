@@ -9,8 +9,15 @@ export default function Form(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    if (value.trim().length === 0) {
+      document.getElementsByTagName("input")[0].style.border = "2px solid red";
+      document.querySelector(".error").classList.remove("hidden");
+      return;
+    }
     props.linkHandler(value);
     setValue("");
+    document.getElementsByTagName("input")[0].style.border = "none";
+    document.querySelector(".error").classList.add("hidden");
   };
 
   return (
@@ -25,6 +32,9 @@ export default function Form(props) {
         value={value}
         onChange={valueHandler}
       />
+      <p className="error md:absolute md:bottom-6 md:left-14 text-sm text-red-400 mb-4 italic -mt-3 self-start hidden z-50 md:m-0 md:self-end">
+        please add a link
+      </p>
       <button
         type="submit"
         className="w-full bg-primary-cyan text-white font-bold py-3 rounded-md md:w-56 md:py-4 md:text-lg md:rounded-lg md:px-4"

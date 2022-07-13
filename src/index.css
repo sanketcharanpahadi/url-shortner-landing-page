@@ -62,3 +62,23 @@ form {
     background-image: url("../public/images/bg-shorten-desktop.svg");
   }
 }
+
+footer ul li:hover,
+.socials svg:hover {
+  color: hsl(180, 66%, 49%);
+  cursor: pointer;
+}
+
+button:hover,
+button:active {
+  background-color: hsla(180, 66%, 49%, 0.7);
+}
+
+header ul li button:hover {
+  background-color: transparent;
+}
+
+.links.active li button:hover {
+  background-color: unset;
+  color: #fff;
+}
