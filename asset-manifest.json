@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/url-shortner-landing-page/static/css/main.2db14e96.css",
-    "main.js": "/url-shortner-landing-page/static/js/main.7febd1fb.js",
+    "main.js": "/url-shortner-landing-page/static/js/main.ec0c738f.js",
     "static/media/bg-boost-desktop.svg": "/url-shortner-landing-page/static/media/bg-boost-desktop.772154c9b0e451733f5e.svg",
     "index.html": "/url-shortner-landing-page/index.html",
     "static/media/bg-boost-mobile.svg": "/url-shortner-landing-page/static/media/bg-boost-mobile.4b04bd89ea775da3deff.svg",
     "static/media/bg-shorten-desktop.svg": "/url-shortner-landing-page/static/media/bg-shorten-desktop.0d9742f433f4b0d8752b.svg",
     "static/media/bg-shorten-mobile.svg": "/url-shortner-landing-page/static/media/bg-shorten-mobile.41c34b33a14a3077e506.svg",
     "main.2db14e96.css.map": "/url-shortner-landing-page/static/css/main.2db14e96.css.map",
-    "main.7febd1fb.js.map": "/url-shortner-landing-page/static/js/main.7febd1fb.js.map"
+    "main.ec0c738f.js.map": "/url-shortner-landing-page/static/js/main.ec0c738f.js.map"
   },
   "entrypoints": [
     "static/css/main.2db14e96.css",
-    "static/js/main.7febd1fb.js"
+    "static/js/main.ec0c738f.js"
   ]
 }
